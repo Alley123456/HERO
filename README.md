@@ -43,7 +43,6 @@ This repository implements **HERO** on nine periodic PDE benchmarks in 1D, 2D, a
 
 - **History-informed supervision.** A lagged operator supplies earlier failure behavior without storing every training checkpoint.
 - **Multiple failure signals.** Candidate selection combines trajectory, spectral, energy, and error-growth diagnostics.
-- **Unchanged HERO inference.** The relative objective changes training; the deployed HERO model backbone.
 - **A complete experiment workflow.** Generate reference trajectories, train with resumable checkpoints, and evaluate free autoregressive rollouts through the supplied scripts.
 
 ## Installation
@@ -125,7 +124,7 @@ Results are saved to `runs/hero/<pde>/seed_<seed>/`, including `config.json`, `l
 
 The [paper](https://arxiv.org/abs/2607.29135) studies both spectral and attention-based backbones. **This repository contains the FNO implementation.** The commands above run one training seed and are not a claim of exact reproduction of every paper result.
 
-In particular, the dense Fourier weights in [`model/fno.py`](model/fno.py) give the current 2D FNO **102,881 parameters**, while [paper Table 8](assets/paper/table-8.png) reports **30,541**. Keep this difference in mind when comparing accuracy or computational cost. The paper figures and tables below are reference material, not measurements produced by the quick-start commands.
+In particular, the dense Fourier weights in [`model/fno.py`](model/fno.py) give the current 2D FNO **102,881 parameters**, while [paper Table 8](assets/paper/table-8.png) reports **30,541**. Keep this difference in mind when comparing accuracy or computational cost.
 
 
 ## Citation
